@@ -1,153 +1,135 @@
-*{
+* {
   margin: 0;
   padding: 0;
   /*  */
 }
-body{
-background-color: #000;
+
+body {
+  background-color: #000;
 }
 
-header{
+header {
+  display: flex;
   position: relative;
   height: 80vh;
   width: 100vw;
-  background-image:url("image/image-header.jpg") ;
+  background-image: url("image/image-header.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+h1, h5 {
+  /* position: absolute; */
+  color: #fff;
+  font-family: 'Roboto Mono', monospace;
+  letter-spacing: 12px;
+  text-shadow: 3px 3px black;
   text-align: center;
 }
 
-h1, h5{
-  color: #fff;
-  font-family: 'Roboto Mono', monospace;
-  position: absolute;
-  letter-spacing: 12px;
-  bottom: 2em;
-  text-shadow: 3px 3px black;
-}
-
-h5{
+h5 {
+  text-align: center;
   text-shadow: 3px 2px black;
   font-size: 20px;
-  left: 2em;
+  bottom: 3em;
+  align-self: flex-start;
+  width: 100%
 }
-#avatar{
-  margin-left: 2em;
-  position: absolute;
-  width: 8em;
-  bottom: 0.5em;
+
+#avatar {
+  height: 8em;
+  align-self: flex-end;
 }
-.wrapper-avatar{
-  display: block;
-  position:absolute;
-  bottom: 2em;
-  width: 50%;
+
+.wrapper-avatar {
+  flex-direction: column;
+  display: flex;
+  /* align-items: center; */
   height: 10em;
-  right:15%;
-  left: auto;
+  flex-basis: 20%;
+  /* border: 1px solid red; */
 }
-#fb{
-  position:absolute;
-  width:3em;
-  top:2em;
-  left:2em;
+
+#fb {
+  position: absolute;
+  width: 3em;
+  top: 2em;
+  left: 2em;
   border: none;
 }
 
-main{
+main {
   min-height: 200vh;
   position: relative;
-
 }
-.aboutMe{
+
+/* ABOUT ME SECTION */
+.aboutMe {
   height: 100vh;
   background-color: #000;
-  position: relative;
-  transition: width 1s linear;
-  transition-delay: 0.1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid red; */
+  flex-direction: column;
 }
 
-  .fav, .cv, .emp{
+.aboutMe div {
+  /* height: 20vh; */
+  padding: 20px;
+  /* border: 1px solid white; */
+  margin: 0 10%;
+}
+
+.fav, .cv, .emp {
   width: 10em;
-  position: absolute;
-  margin: 8em;
-    }
-  .cv{
-    left:10em;
-  }
-  .divCV{
-    display: inline-block;
-    top: 20%;
-    left: 25em;
-    width: 50vw;
-    height: 5em;
-    position: absolute;
-    color: white;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 18px;
-    overflow: hidden;
-  }
-    .cv:focus ~ .divCV, .emp:focus ~ .divEmp, .fav:focus ~ .divFav{
-    height: 35em;
-    transition: height 1s linear;
-    transition-delay: 0.1s;
-
-  }
-  input{
-    outline: 0;
-  }
-  .cv:hover, .fav:hover, .emp:hover, #fb:hover, .web1:hover{
-    cursor:pointer;
-    transform: scale(1.15, 1.15);
-    box-shadow: 0 0 20px 20px #344555;
-    transition-delay: .1s;
-  }
-
-  .emp{
-  right: 15em;
-  top:30%;
-  }
-  .divEmp{
-    display: inline-block;
-    position: absolute;
-    color: white;
-    top:40%;
-    right:31em;
-    width: 49vw;
-    height: 4em;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 18px;
-    text-align: right;
-    overflow: hidden;
-  }
-  .fav{
-    position: absolute;
-    left:10em;
-    bottom:5em;
-  }
-  .divFav{
-    display: inline-block;
-    position: absolute;
-    top:64%;
-    left: 25em;
-    width: 50vw;
-    height: 4em;
-    color: white;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 18px;
-    overflow: hidden;
 }
-.projects{
-  height: 100vh;
-  width: 100vw;
-  margin: 0;
-  padding: 0;
-  background-color: #344555;
-  display: absolute;
+
+.aboutMe div.divCV {
+  color: white;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 18px;
+  /* overflow: hidden; */
+  /* flex-basis: 30vw; */
 }
-.projects > h2, .aboutMe > h2{
+
+input {
+  outline: 0;
+}
+
+.cv:hover, .fav:hover, .emp:hover, .web1:hover {
+  cursor: pointer;
+  transform: scale(1.15, 1.15);
+  transition-delay: .1s;
+}
+
+#fb:hover {
+  box-shadow: 0 0 20px 20px #344555;
+  cursor: pointer;
+  transform: scale(1.15, 1.15);
+  transition-delay: .1s;
+}
+
+.aboutMe div.divEmp {
+  color: white;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 18px;
+  text-align: right;
+}
+
+.aboutMe div.divFav {
+  color: white;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 18px;
+}
+
+/* TYTUŁY SEKCJI  */
+.projects>h2, .aboutMe>h2 {
+  justify-content: center;
   text-align: center;
   font-family: 'Roboto Mono', monospace;
   color: white;
@@ -156,178 +138,122 @@ main{
   text-shadow: 3px 3px black;
 }
 
-.web1{
+/* PROJECTS SECTION */
+.projects {
+  height: 120vh;
+  background-color: #344555;
+}
+
+.projects div {
+  padding: 20px;
+  margin: 0 10%;
+}
+
+.wrapper-project {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.project1 {
+  /* border: 1px solid red; */
+  width: 85vw;
+  display: flex;
+}
+
+.project2 {
+  /* border: 1px solid red; */
+  width: 85vw;
+  display: flex;
+}
+
+.web1 {
   width: 20em;
-  position: absolute;
-  margin: 3em 2em 2em 8em;
+  /* border: 1px solid red; */
+  /* margin: 3em 2em 2em 8em; */
 }
 
-.web2{
-  margin: 25em 2em 2em 8em;
-  position: absolute;
-  width:20em;
-}
-.web2-div{
-  margin-top: 25em;
-  margin-right: 15em;
-  position:absolute ;
-  left:35em;
+.web1-div, .web2-div {
   color: white;
   font-family: 'Roboto Mono', monospace;
   font-size: 20px;
-  overflow: hidden;
-
 }
 
-.web1-div{
-  margin-top: 5em;
-  margin-right: 15em;
-  position:absolute;
-  left:35em;
-  color: white;
-  font-family: 'Roboto Mono', monospace;
-  font-size: 20px;
-  overflow: hidden;
+.web2 {
+  width: 20em;
 }
-footer{
+
+footer {
   text-align: center;
   position: relative;
   background-color: #000;
   height: 5em;
   color: white;
 }
-footer > p{
+
+footer>p {
   padding-top: 30px;
   top: 5em;
 }
-@media (max-width: 1620px ) {
-  #avatar{
+
+@media (max-width: 1442px) {
+  .aboutMe {
+    height: 120vh;
+  }
+
+  h5 {
     display: none;
   }
-  .wrapper-avatar{
-    right:25%;
-    bottom: 1px;
+
+  .aboutMe div:nth-child(-n+4) {
+    font-size: 14px
+  }
+
+  .aboutMe>h2, .projects>h2 {
+    font-size: 30px;
+  }
+
+  .web1-div, .web2-div {
+    font-size: 14px
   }
 }
-  @media (max-width: 1315px){
-    .aboutMe{
-      height: 200vh;
-    }
-      .cv{
-        top:2em;
-        left:30%;
-      }
-      .divCV{
-        top:15em;
-        left:20%;
-      }
-      .emp{
-        top:25em;
-        left:30%;
-      }
-      .divEmp{
-        text-align: left;
-        top:35em;
-        left:20%;
-      }
-      .fav{
 
-        top:55%;
-        left:30%;
-      }
-      .divFav{
-        top: 70%;
-        left:25%;
-      }
+@media(max-width: 1100px) {
+  .projects {
+    height: 200vh;
   }
-  @media (max-width:1470px){
-    .projects{
-      height: 200vh;
+
+  .wrapper-project {
+    flex-wrap: wrap;
+  }
+
+  .project1, .project2 {
+    flex-direction: column;
+  }
+
+  @media (max-width: 560px) {
+    .aboutMe>h2, .projects>h2 {
+      font-size: 20px;
     }
-    .web1{
-      left:12%;
+
+    .wrapper-avatar>h1 {
+      align-self: flex-end;
+      font-size: 30px;
     }
-    .web1-div{
-      margin-right:5em;
-      bottom:25%;
-      left:20%;
-    }
-    .web2{
-      bottom:15%;
-      left:12%;
-    }
-    .web2-div{
-      margin-right:5em;
-      bottom:13%;
-      left:20%;
+
+    .aboutMe {
+      height: 150vh;
     }
   }
 
-@media (max-width: 460px){
-  .aboutMe{
-    height: 230vh;
-  }
-  .wrapper-avatar{
-    height:400px;
-    right:25%;
-    bottom: 1px;
-  }
-  .projects{
-    height: 220vh;
-  }
-  h5{
-  display: none;
-  }
-  .aboutMe > h2{
-    font-size: 20px;
-  }
-  .cv{
-    left:10%;
-  }
-  .divCV{
-    top:18%;
-    font-size: 15px;
-    height: 30em;
-  }
-  .emp{
-    top:23%;
-    left:15%;
-  }
-  .divEmp{
-    height: 30em;
-    font-size: 15px;
-    top: 40%;
-  }
-  .fav{
-    left:10%;
-    top:61%;
-  }
+  @media(max-width:320px) {
+    .web1, .web2 {
+      width: 15em;
+    }
 
-  .divFav{
-    font-size: 15px;
-    top:75%;
-    height: 30em;
+    footer>p {
+      font-size: 10px;
+    }
   }
-  .web1{
-    left:1px;
-    margin: 3em 2em 2em 3em;
-  }
-  .web1-div{
-    font-size: 15px;
-    bottom: 27%;
-  }
-  .web2{
-    margin: 3em 3em 2em 3em;
-    left:1px;
-  }
-  .web2-div{
-    font-size: 15px;
-    bottom: 15%;
-  }
-  .wrapper-avatar{
-    left:17%;
-  }
-  .projects > h2{
-    font-size:25px;
-  }
-}
