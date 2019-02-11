@@ -38,7 +38,7 @@ $about.ready(function() {
  	});
 
  });
- if (window.matchMedia("(max-width: 320px)").matches)
+ if (window.matchMedia("(max-width: 400px)").matches)
      {
  $doc.ready(function() {
   // var state = false;
