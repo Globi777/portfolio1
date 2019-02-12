@@ -69,7 +69,7 @@ main {
 
 /* ABOUT ME SECTION */
 .aboutMe {
-  height: 100vh;
+  height: 120vh;
   background-color: #000;
   display: flex;
   align-items: center;
@@ -79,10 +79,7 @@ main {
 }
 
 .aboutMe div {
-  /* height: 20vh; */
-  padding: 20px;
-  /* border: 1px solid white; */
-  margin: 0 10%;
+  width:60vw;
 }
 
 .fav, .cv, .emp {
@@ -127,7 +124,7 @@ input {
   font-size: 18px;
 }
 
-/* TYTUŁY SEKCJI  */
+/* SECTIO TITLES  */
 .projects>h2, .aboutMe>h2 {
   justify-content: center;
   text-align: center;
@@ -148,7 +145,6 @@ input {
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  /* justify-content: center; */
   justify-content: space-between;
 }
 
@@ -156,15 +152,12 @@ input {
   /* border: 1px solid red; */
   width: 85vw;
   display: flex;
-  justify-content: space-around;
 }
 
 .project2 {
   /* border: 1px solid red; */
   width: 85vw;
   display: flex;
-  /* justify-content: space-between; */
-
 }
 
 .web1, .web2 {
@@ -233,18 +226,19 @@ footer>p {
   }
 
   @media (max-width: 560px) {
-    .aboutMe {
-      align-items: flex-start;
-    }
     .aboutMe>h2, .projects>h2 {
       font-size: 20px;
       align-self: center;
+      padding-bottom: 20px;
     }
     .wrapper-project{
       align-items: center;
       justify-content: center;
       align-items: center;
       padding-left: 1em;
+    }
+    .divCV{
+      padding-bottom: 20px;
     }
     .wrapper-avatar>h1 {
       align-self: flex-end;
@@ -257,10 +251,7 @@ footer>p {
   }
 
   @media(max-width:320px) {
-    .aboutMe {
-      align-items: flex-start;
-    }
-    aboutMe div.divEmp {
+    .aboutMe div.divEmp {
       text-align: left;
     }
 

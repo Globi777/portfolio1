@@ -54,14 +54,11 @@ $about.ready(function() {
  $(".divFav > p").hide();
 
 $('.emp').click(function () {
-
     $(".divEmp > p").slideToggle("slow");
     $(".divFav > p").hide();
-
 });
 
 $(".fav").click(function () {
-
       $(".divFav > p").slideToggle("slow");
       $(".divEmp > p").hide();
     });
@@ -71,5 +68,5 @@ $(".fav").click(function () {
  if (window.matchMedia("(max-width: 560px)").matches){
     $('#avatar').remove();
  } else {
-   $('header.img').attr('#avatar');
+   $('header > img').attr('#avatar');
  }
