@@ -231,12 +231,7 @@ footer>p {
       align-self: center;
       padding-bottom: 20px;
     }
-    .wrapper-project{
-      align-items: center;
-      justify-content: center;
-      align-items: center;
-      padding-left: 1em;
-    }
+
     .divCV{
       padding-bottom: 20px;
     }
@@ -247,6 +242,23 @@ footer>p {
 
     .aboutMe {
       height: 150vh;
+    }
+    .aboutMe div.divEmp {
+      text-align: left;
+    }
+
+    .wrapper-project{
+      align-items: center;
+      justify-content: center;
+      align-items: center;
+
+    }
+    .web1-div, .web2-div {
+      text-align: center;
+
+    }
+    .web1, .web2 {
+      width: 90%;
     }
   }
 
@@ -259,17 +271,15 @@ footer>p {
       align-items: center;
       justify-content: center;
       align-items: center;
-      padding-left: 1em;
+
     }
     .web1-div, .web2-div {
       text-align: center;
 
     }
     .web1, .web2 {
-      width: 15em;
+      width: 90%;
     }
-
-
     footer>p {
       font-size: 10px;
     }
