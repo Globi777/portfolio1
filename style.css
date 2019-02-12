@@ -143,12 +143,6 @@ input {
   height: 120vh;
   background-color: #344555;
 }
-
-/* .projects div:nth-child(-n+3){
-  padding: 20px 0;
-  /* margin: 10 0%; */ */
-}
-
 .wrapper-project {
   display: flex;
   flex-direction: column;
@@ -246,7 +240,12 @@ footer>p {
       font-size: 20px;
       align-self: center;
     }
-
+    .wrapper-project{
+      align-items: center;
+      justify-content: center;
+      align-items: center;
+      padding-left: 1em;
+    }
     .wrapper-avatar>h1 {
       align-self: flex-end;
       font-size: 30px;
