@@ -85,6 +85,9 @@ main {
 .fav, .cv, .emp {
   width: 10em;
 }
+.emp{
+  padding-bottom: 1rem;
+}
 
 .aboutMe div.divCV {
   color: white;
@@ -242,6 +245,7 @@ footer>p {
 
     .aboutMe {
       height: 150vh;
+
     }
     .aboutMe div.divEmp {
       text-align: left;
@@ -262,12 +266,17 @@ footer>p {
     }
   }
 
-  @media(max-width:320px) {
+  @media(min-width:320px) {
     .aboutMe div.divEmp {
-      text-align: left;
+      text-align: center;
+    }
+    .aboutMe div.divFav{
+      padding-bottom: 2rem;
     }
     .aboutMe {
-      height: 150vh;
+      text-align: center;
+      height: 210vh;
+      justify-content: space-between
     }
 
     .wrapper-project{
