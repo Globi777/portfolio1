@@ -266,6 +266,9 @@ footer>p {
     .aboutMe div.divEmp {
       text-align: left;
     }
+    .aboutMe {
+      height: 150vh;
+    }
 
     .wrapper-project{
       align-items: center;
