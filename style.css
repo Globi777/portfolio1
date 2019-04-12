@@ -41,13 +41,14 @@ h5 {
 }
 
 #avatar {
+
   height: 8em;
   align-self: flex-end;
 }
 
 .wrapper-avatar {
   flex-direction: column;
-  display: block;
+  display: flex;
   /* align-items: center; */
   height: 10em;
   flex-basis: 20%;
