@@ -47,7 +47,7 @@ h5 {
 
 .wrapper-avatar {
   flex-direction: column;
-  display: flex;
+  display: block;
   /* align-items: center; */
   height: 10em;
   flex-basis: 20%;
@@ -84,8 +84,8 @@ main {
 
 .fav, .cv, .emp {
   width: 10em;
-  transition-delay: .2s;
-  transition-timing-function: linear;
+  transition: transform .2s ease-in;
+  will-change: transform;
 }
 .emp, .cv{
   padding-bottom: 1rem;
@@ -161,6 +161,8 @@ input {
 .web1 {
   width: 20em;
   padding: 20px;
+  transition: transform .2s ease-in;
+  will-change: transform;
   /* border: 1px solid red; */
 }
 
